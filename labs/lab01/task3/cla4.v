@@ -51,18 +51,18 @@ module cla4(
   and #(2) (t10, p0, cin);
   or  #(2) (c1, g0, t10);
 
-  // c2 = g1 + p1.g0 + p1.p0.cin
+  
   and #(2) (t20, p1, g0);
   and #(2) (t21, p1, p0, cin);
   or  #(2) (c2, g1, t20, t21);
 
-  // c3 = g2 + p2.g1 + p2.p1.g0 + p2.p1.p0.cin
+  
   and #(2) (t30, p2, g1);
   and #(2) (t31, p2, p1, g0);
   and #(2) (t32, p2, p1, p0, cin);
   or  #(2) (c3, g2, t30, t31, t32);
 
-  // c4 (cout) = g3 + p3.g2 + p3.p2.g1 + p3.p2.p1.g0 + p3.p2.p1.p0.cin
+  
   and #(2) (t40, p3, g2);
   and #(2) (t41, p3, p2, g1);
   and #(2) (t42, p3, p2, p1, g0);
